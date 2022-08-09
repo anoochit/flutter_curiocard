@@ -79,8 +79,8 @@ class HomePage extends StatelessWidget {
                     imageUrl: 'https://ipfs.io/ipfs/${curioCard.cardTypes[index].ipfsHash}',
                     progressIndicatorBuilder: (context, url, downloadProgress) => Center(
                       child: SizedBox(
-                        width: 64,
-                        height: 64,
+                        width: 32,
+                        height: 32,
                         child: CircularProgressIndicator(
                           value: downloadProgress.progress,
                         ),

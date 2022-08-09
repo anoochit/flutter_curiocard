@@ -10,9 +10,7 @@ class CardDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(""),
-      ),
+      appBar: AppBar(),
       body: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -24,13 +22,11 @@ class CardDetailPage extends StatelessWidget {
               child: CachedNetworkImage(
                 fit: BoxFit.fitWidth,
                 imageUrl: 'https://ipfs.io/ipfs/${card.ipfsHash}',
-                progressIndicatorBuilder: (context, url, downloadProgress) => Center(
+                progressIndicatorBuilder: (context, url, downloadProgress) => const Center(
                   child: SizedBox(
                     width: 64,
                     height: 64,
-                    child: CircularProgressIndicator(
-                      value: downloadProgress.progress,
-                    ),
+                    child: CircularProgressIndicator(),
                   ),
                 ),
                 errorWidget: (context, url, error) => const Icon(Icons.error),
