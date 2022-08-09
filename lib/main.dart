@@ -17,7 +17,6 @@ class MyApp extends StatelessWidget {
       title: 'Curio Card',
       theme: ThemeData(
         useMaterial3: true,
-        primarySwatch: Colors.orange,
       ),
       home: GraphQLProvider(
         client: CurioCardService.clientToQuery(),
